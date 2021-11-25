@@ -1,0 +1,24 @@
+name: "Release"
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - edited
+      - ready_for_review
+      - review_requested
+      - synchronize
+      
+jobs:
+  check:
+    name: "Check"
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Get data
+      run: |
+        - echo $GITHUB_EVENT_PATH
+        - cat $GITHUB_EVENT_PATH
+        - exit 1
