@@ -19,6 +19,6 @@ jobs:
     steps:
     - name: Get data
       run: |
-        - echo $GITHUB_EVENT_PATH
-        - cat $GITHUB_EVENT_PATH
-        - exit 1
+        echo $GITHUB_EVENT_PATH
+        cat $GITHUB_EVENT_PATH
+        exit 1
